@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "TechChic_backend": {
+      "main": "src/TechChic_backend/main.mo",
+      "type": "motoko"
+    },
+    "TechChic_frontend": {
+      "dependencies": [
+        "TechChic_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/TechChic_frontend/src/index.html"
+      },
+      "source": [
+        "src/TechChic_frontend/assets",
+        "dist/TechChic_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
